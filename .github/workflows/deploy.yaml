@@ -8,13 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Configure Nodejs
         uses: actions/setup-node@v4
         with:
           node-version: "20.x"
       - name: Install dependencies
-        run: npm ci
+        run: npm install
       - name: NPM build
         run: npm run build
       - name: Deployment
